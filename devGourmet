@@ -20,7 +20,7 @@ cp -v $REPO/gourmet/plugins/*.gourmet-plugin $GOURMET_DIR/plugins
 /usr/bin/gourmet --gourmet-directory=$GOURMET_DIR
 
 
-# /usr/bin/gourmet --gourmet-directory=$GOURMET_DIR
+/usr/bin/gourmet --gourmet-directory=$GOURMET_DIR
 
 
 
