@@ -1,0 +1,10 @@
+[Gourmet Plugin]
+Module=sl2evernote
+Version=1.0
+API_Version=1.0
+Name=Shopping List Evernote Saver
+Name[en_GB]=Shopping List Evernote Saver
+Comment=Save shopping lists as Evernote checklists.
+Category=Tools
+Category[en_GB]=Tools
+Authors=Todd Kusterer <evernote.plugin.gourmet@quasisemi.com>

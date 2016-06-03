@@ -1,0 +1,31 @@
+#!/bin/bash
+
+REPO=/home/tkuster/Src/python/evernoteShopping
+PLUGIN=$REPO/gourmet/plugins/sl2evernote
+TEST_DIR=/tmp/TEST
+GOURMET_DIR=$TEST_DIR/.gourmet
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export PYTHONPATH=$PYTHONPATH:$DIR/gourmet/plugins/evernote_shopping/sl2evernote
+echo $PYTHONPATH
+
+mkdir -p $GOURMET_DIR/plugins
+cp ~/.gourmet/recipes.db $GOURMET_DIR
+cp ~/.gourmet/active_plugins $GOURMET_DIR
+cp ~/.gourmet/guiprefs $GOURMET_DIR
+
+ln -s $PLUGIN $GOURMET_DIR/plugins
+cp -v $REPO/gourmet/plugins/*.gourmet-plugin $GOURMET_DIR/plugins
+
+/usr/bin/gourmet --gourmet-directory=$GOURMET_DIR
+
+
+# /usr/bin/gourmet --gourmet-directory=$GOURMET_DIR
+
+
+
+
+rm -rf /tmp/TEST
+echo 'Done'
+
+#PYTHONPATH
