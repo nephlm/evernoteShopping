@@ -14,10 +14,10 @@ To use the plugin you will need an evernote account
 Developer tokens are some what mis-named, they are the recommended
 keys for accessing your evernote account from a desktop app such
 as Gourmet.  Evernote's OAuth implementation doesn't support an
-out of band authentication not a username/password authentication
+out of band authentication nor a username/password authentication
 making the developer token the choice by default.
 
-# Requirement
+# Requirements
 
 At present installation is a manual process.  If someone besides me starts using this I'll look into writing a setup.py script.
 
@@ -25,7 +25,8 @@ Gourmet must be installed and able to be run.  In addition to
 Gourmet the Evernote API must be installed.
 
 ```sh
-sudo pip install -r <REPO>/requirements.txt
+REPO=<directory where this file is located>
+sudo pip install -r $REPO/requirements.txt
 ```
 
 or
