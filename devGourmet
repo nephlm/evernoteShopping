@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# convenient script to run a test.
+
 REPO=/home/tkuster/Src/python/evernoteShopping
 PLUGIN=$REPO/gourmet/plugins/sl2evernote
 TEST_DIR=/tmp/TEST
