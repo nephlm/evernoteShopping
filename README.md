@@ -1,4 +1,4 @@
-# evernoteShopping
+# Evernote Shopping List Printer
 
 Evernote shopping list printing for gourmet.  This is a plugin for
 the gourmet recipe manager (http://thinkle.github.io/gourmet/).
