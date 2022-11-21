@@ -1,4 +1,4 @@
-import shoppingEvernotePlugin
-import sl2evernotePrefs
+import sl2evernote.shoppingEvernotePlugin as shoppingEvernotePlugin
+import sl2evernote.sl2evernotePrefs as sl2evernotePrefs
 
 plugins = [shoppingEvernotePlugin.ShoppingEvernote, sl2evernotePrefs.SL2EvernotePrefs]

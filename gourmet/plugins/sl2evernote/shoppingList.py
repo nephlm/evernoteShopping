@@ -2,18 +2,18 @@ from evernote.api.client import EvernoteClient
 import evernote.edam.type.ttypes as Types
 import time
 
-class EverNote(object):
 
+class EverNote(object):
     def __init__(self, devToken, testing=False):
         self._devToken = devToken
         self._noteStore = None
         self._testing = testing
         self._token = self.getAuthToken()
-        #self._notStoreUrl = self.getNoteStore()
+        # self._notStoreUrl = self.getNoteStore()
         if testing:
-            self._client = EvernoteClient(token = self._token)
+            self._client = EvernoteClient(token=self._token)
         else:
-            self._client = EvernoteClient(token = self._token, sandbox=False)
+            self._client = EvernoteClient(token=self._token, sandbox=False)
 
     def getAuthToken(self):
         return self._devToken
@@ -22,7 +22,6 @@ class EverNote(object):
         if not self._noteStore:
             self._noteStore = self._client.get_note_store()
         return self._noteStore
-
 
     def getNotebook(self, notebookName):
         """
@@ -73,7 +72,7 @@ class EverNote(object):
             note.notebookGuid = notebookGuid
         note = noteStore.createNote(note)
         if self._testing:
-            print str(note)
+            print(str(note))
         return note
 
     @staticmethod
@@ -85,15 +84,18 @@ class EverNote(object):
 
         @returns: str -- completed/wrapped note.
         """
-        body = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
-        body += "<!DOCTYPE en-note SYSTEM \"http://xml.evernote.com/pub/enml2.dtd\">"
+        body = '<?xml version="1.0" encoding="UTF-8"?>'
+        body += '<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">'
         body += "<en-note>%s</en-note>" % noteBody
-        return body.encode('ascii', 'xmlcharrefreplace')
+        return body
+        return body.encode("ascii", "xmlcharrefreplace")
+
 
 class ShoppingEverNote(EverNote):
     """
     Shopping list specific subclass of ``EverNote``
     """
+
     def __init__(self, devToken, notebookName):
         """
         @param devToken: str -- The developer token to be used to
@@ -102,7 +104,7 @@ class ShoppingEverNote(EverNote):
                 shopping lists will posted.
         """
         super(ShoppingEverNote, self).__init__(devToken)
-        self.notebookName = notebookName # 'Shopping Lists'
+        self.notebookName = notebookName  # 'Shopping Lists'
         self._notebookGuid = self.getShoppingListNotebook().guid
 
     def getShoppingListNotebook(self):
@@ -120,12 +122,13 @@ class ShoppingEverNote(EverNote):
         @param note: str -- ENML formatted note to be posted to
                 evernote.
         """
-        self.createNote('Shopping List for %s' % time.strftime('%x'),
-                        note, self._notebookGuid)
+        self.createNote(
+            "Shopping List for %s" % time.strftime("%x"), note, self._notebookGuid
+        )
 
 
 # if __name__ == '__main__':
 #     shoppingList = ShoppingEverNote()
 #     notebook = shoppingList.getShoppingListNotebook()
-#     print str((notebook.name, notebook.guid))
+#     print (str((notebook.name, notebook.guid)))
 #     shoppingList.createShoppingList('foo')
