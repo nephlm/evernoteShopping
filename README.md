@@ -29,14 +29,6 @@ REPO=<directory where this file is located>
 sudo pip install -r $REPO/requirements.txt
 ```
 
-or
-
-```sh
-sudo pip install evernote
-```
-
-Either should install all missing requirements.
-
 # Installation
 
 ## Find a plugin directory
@@ -64,8 +56,8 @@ copy destination to one of the other plugin dirs.
 ```sh
 PLUGIN_DIR=~/.gourmet/plugins
 REPO=<directory where this file is located>
-cp $REPO/gourmet/plugins/*.gourmet-plugin $GOURMET_DIR
-cp -r $REPO/gourmet/plugins/sl2Evernote $GOURMET_DIR/
+cp $REPO/gourmet/plugins/*.gourmet-plugin $PLUGIN_DIR
+cp -r $REPO/gourmet/plugins/sl2Evernote $PLUGIN_DIR/
 ```
 
 
