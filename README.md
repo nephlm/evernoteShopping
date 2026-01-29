@@ -1,3 +1,20 @@
+# READ ONLY ARCHIVED REPOSITORY
+
+Gourmet has gone a different direction and I too have opted for a 
+different solution for my reipes and thus, my shopping list.  
+See (https://github.com/nephlm/mealie-static) for the current 
+solution.
+
+I also walked away from Evernote, and there is a significant chance 
+that thier API has changed by the time you are reading this and so 
+it is doubtful this project is still operational. 
+
+Because of this, I'm archiving this repository.  I doubt anyone else
+used it, so I don't think it is a major issue, but if so wanted to 
+acknowledge that it is not being kept current with library versions
+and thus security patches.
+
+
 # Evernote Shopping List Printer
 
 Evernote shopping list printing for gourmet.  This is a plugin for
